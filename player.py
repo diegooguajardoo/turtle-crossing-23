@@ -13,9 +13,13 @@ class Player(Turtle):
         self.reset_position()
 
     def turtle_walk(self):
-        self.forward(20)
+        self.forward(MOVE_DISTANCE)
 
     def reset_position(self):
         self.goto(STARTING_POSITION)
         self.setheading(90)
 
+    def is_at_finishline(self):
+        if self.ycor() >= 280:
+            self.reset_position()
+            return True

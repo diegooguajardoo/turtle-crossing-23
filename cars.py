@@ -18,7 +18,6 @@ class Car(Turtle):
         self.shapesize(stretch_wid=1, stretch_len=3)
         self.fillcolor(random.choice(colors))
 
-
     def move(self, level):
         new_x = self.xcor() - STARTING_MOVE_DISTANCE - MOVE_INCREMENT * level
         self.goto(new_x, self.ycor())
